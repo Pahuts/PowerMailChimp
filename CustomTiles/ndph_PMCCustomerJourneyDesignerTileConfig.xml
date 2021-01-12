@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- file name should only contain alpha-numeric characters and underscore -->
+<!-- format: <fileNamePrefix>CustomerJourneyDesignerTileConfig.xml> -->
+<LibraryTile>
+  <!-- mandatory -->
+  <!-- icon: CSS class defining your tile icon-->
+  <!-- fontFamily: CSS class defining font-family for your icon-->
+  <!-- cssFileName: your CSS file name in CRM-->
+  <Definition icon="SMSTileSymbol" fontFamily="CCFSymbolFont" cssFileName="pk_TwilioSMSCustomerJourneyDesignerTileConfig.css" />
+  <!-- mandatory -->
+  <ChannelProperties>
+    <!-- mandatory -->
+    <EntityType>po_mailchimpcampaign</EntityType>
+    <EntitySetName>po_mailchimpcampaigns</EntitySetName>
+    <TitleFieldName>po_name</TitleFieldName>
+    <ComplianceField>donotphone</ComplianceField>
+    <!-- mandatory -->
+    <!-- Lookup view id for your entity-->
+    <LookupViewId>8A4DBE09-CAE1-400F-B09A-2081ECD8A554</LookupViewId>
+    <!--Quick view form id for your entity -->
+    <QuickViewFormId>1E1BA220-6781-4137-83F6-8009DAF669BA</QuickViewFormId>
+  </ChannelProperties>
+  <!-- optional -->
+  <ResponseTypes>
+    <ResponseType id="Sent">
+      <Labels>
+        <!-- Labels should always have a Label for 1033 -->
+        <Label locId="1033">Sent</Label>
+        <Label locId="1031">[Sent]</Label>
+      </Labels>
+    </ResponseType>
+    <ResponseType id="Delivered">
+      <Labels>
+        <!-- Labels should always have a Label for 1033 -->
+        <Label locId="1033">Delivered</Label>
+        <Label locId="1031">[Delivered]</Label>
+      </Labels>
+    </ResponseType>
+    <ResponseType id="keyword" custom="True">
+      <!-- there should be only one response type with attribute custom=true -->
+      <Labels>
+        <!-- Labels should always have a Label for 1033 -->
+        <Label locId="1033">Keyword match</Label>
+        <Label locId="1031">[Keyword match]</Label>
+      </Labels>
+    </ResponseType>
+  </ResponseTypes>
+  <!-- mandatory -->
+  <Labels>
+    <!-- Labels should always have a Label for 1033 -->
+    <Label locId="1033">PowerMailChimp Email Blast</Label>
+    <Label locId="1031">[Special]</Label>
+  </Labels>
+  <!-- mandatory -->
+  <Tooltips>
+    <!-- Tooltips should always have a tooltip for 1033 -->
+    <!-- mandatory -->
+    <Tooltip locId="1033">PowerMailChimp Email</Tooltip>
+    <!-- optional -->
+    <Tooltip locId="1031">PowerMailChimp Email</Tooltip>
+  </Tooltips>
+</LibraryTile>
